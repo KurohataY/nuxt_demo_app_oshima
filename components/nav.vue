@@ -4,9 +4,9 @@
     <nav class="layer">
     	<ul>
         <!-- ナビゲート先（リンク） -->
-    		<li><router-link to="/">TOP</router-link></li>
-    		<li><router-link to="/about">ABOUT</router-link></li>
-        <li><router-link to="/tourism">Tourism</router-link></li>
+    		<li><nuxt-link to="/">TOP</nuxt-link></li>
+    		<li><nuxt-link to="/about">ABOUT</nuxt-link></li>
+        <li><nuxt-link to="/tourism">Tourism</nuxt-link></li>
     	</ul>
     </nav>
     <!-- メニュータイトル -->
