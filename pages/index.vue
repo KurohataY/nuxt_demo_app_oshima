@@ -15,10 +15,6 @@
       <h3>観光マップ</h3>
       <Map />
     </main>
-    <!-- フッター -->
-    <footer>
-      <Fot />
-    </footer>
   </div>
 
 </template>
@@ -27,14 +23,12 @@
 import Map from '~/components/map.vue'
 import Img from '~/components/image.vue'
 import Des from '~/components/description.vue'
-import Fot from '~/components/footer.vue'
 
 export default {
   components: {
     Map,
     Img,
-    Des,
-    Fot
+    Des
   }
 }
 </script>
@@ -57,11 +51,6 @@ main{
 h3{
   text-align: center;
   margin:10px 0;
-}
-footer{
-  margin:10px 0 0 0;
-  height: 100px;
-  background-color: #29A2E3;
 }
 .text-center{
   text-align: center;
