@@ -1,20 +1,30 @@
 <template >
   <div>
     <h3 class="">紹介動画</h3>
-    <iframe v-for="url of youtube_url" width="560" height="315" :src="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <youtube
+      class="youtube_size"
+      v-for="id of youtube_id"
+      ref="youtube"
+      :video-id="id"
+      />
   </div>
 
 </template>
 
 <script>
+import Vue from 'vue'
+// vue-youtube設定
+import VueYoutube from 'vue-youtube'
+Vue.use(VueYoutube)
+
 export default{
   data() {
     return{
-      youtube_url: {
-        n1: "https://www.youtube.com/embed/vHrBqSU-DCY",
-        n2: "https://www.youtube.com/embed/KxSMMg0GmUo",
-        n3: "https://www.youtube.com/embed/Mxz9q5Hh43E",
-        n4: "https://www.youtube.com/embed/wGegL_wWJM0"
+      youtube_id: {
+        n1: "vHrBqSU-DCY",
+        n2: "KxSMMg0GmUo",
+        n3: "Mxz9q5Hh43E",
+        n4: "wGegL_wWJM0"
       }
     }
   }
@@ -22,4 +32,8 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+.youtube_size{
+  width: 560px;
+  height: 300px;
+}
 </style>
