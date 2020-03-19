@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 header{
   height: 100px;
   position: fixed;

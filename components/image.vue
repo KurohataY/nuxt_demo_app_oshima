@@ -23,6 +23,7 @@ export default{
 <style lang="scss">
 .title_img{
   position: relative;
+  margin-top: 100px;
   img{
     width: 100%;
     height: 300px;

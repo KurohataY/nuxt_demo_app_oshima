@@ -11,10 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "leaflet": "^1.6.0",
+    "@nuxtjs/axios": "^5.9.5",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "aos": "^3.0.0-beta.6",
+    "dotenv": "^8.2.0",
+    "newsapi": "^2.4.0",
     "nuxt": "^2.11.0",
     "nuxt-leaflet": "0.0.21",
-    "vue2-leaflet": "^2.5.2"
+    "vuex-persistedstate": "^2.7.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.0"
