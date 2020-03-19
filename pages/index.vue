@@ -68,9 +68,10 @@ export default {
     text-align: center;
   }
   aside{
-    width: 30%;
+    width: 25%;
     display:inline;
 	  float: right;
+    margin-right: 70px;
   }
   .twitter-timeline{
     width: 300px;
