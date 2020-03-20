@@ -2,7 +2,7 @@
   <div>
     <h3 class="">紹介動画</h3>
     <youtube
-      class="youtube_size"
+      style="width: 50%;height: 300px;"
       v-for="id of youtube_id"
       ref="youtube"
       :video-id="id"
@@ -32,8 +32,4 @@ export default{
 </script>
 
 <style lang="scss" scoped>
-.youtube_size{
-  width: 560px;
-  height: 300px;
-}
 </style>

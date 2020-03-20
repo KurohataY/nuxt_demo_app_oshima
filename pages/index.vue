@@ -5,14 +5,15 @@
     <!-- 説明文 -->
     <Des />
     <!-- メイン -->
-    <main>
+    <main class="web_style">
       <Youtubes />
+      <News />
       <!-- 地図の表示 -->
       <h3>観光マップ</h3>
       <Map />
     </main>
     <!-- サイド -->
-    <aside>
+    <aside class="web_style">
       <!-- 天気取得（大船渡） -->
       <Weather />
       <!-- Twitter -->
@@ -20,7 +21,6 @@
       <div class="text-center">
         <a class="twitter-timeline" data-lang="ja" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/COiod3nId8QqtKv?ref_src=twsrc%5Etfw">Tweets by COiod3nId8QqtKv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-      <News />
     </aside>
   </div>
 
@@ -53,9 +53,11 @@ export default {
      display: block;
      clear: both;
   }
-
   #web{
 
+  }
+  .web_style{
+    padding: 0 30px;
   }
   body{
     font-family: 'Kosugi Maru', sans-serif;
@@ -71,7 +73,6 @@ export default {
     width: 25%;
     display:inline;
 	  float: right;
-    margin-right: 70px;
   }
   .twitter-timeline{
     width: 300px;

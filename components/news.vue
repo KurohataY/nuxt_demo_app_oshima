@@ -1,29 +1,32 @@
 <template>
-  <div>
+  <div id="news">
     <h3>気仙沼大島関連のニュース</h3>
-    <!-- ニュースカード（参考：https://qiita.com/KIYS/items/9805118aa86f35c7a852#%E5%AE%9F%E8%A3%85-6） -->
-    <v-card v-for="news of $store.state.news" hover outlined >
-      <a :href="news.url" target="_blank" rel="noopener">
-        <v-hover v-slot:default="{ hover }">
-          <v-img
-            :src="getImageUrl(news.urlToImage)"
-            :class="{ 'on-hover': hover }"
-            :aspect-ratio="16 / 9"
-          >
-            <v-container fill-height fluid class="pa-0">
-              <v-row class="mt-auto" no-gutters>
-                <v-col cols="12" class="news-title-section pa-2">
-                  <h2 class="white--text" align="left">{{ news.title }}</h2>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-img>
-        </v-hover>
-      </a>
-      <v-card-text class="caption text-right pt-1 pb-0">
-        <span class="mr-2">{{ news.author }}</span>
-      </v-card-text>
-    </v-card>
+    <v-container>
+      <v-row no-gutter>
+        <v-col v-for="news of $store.state.news" cols="12" sm="6">
+          <!-- ニュースカード（参考：https://qiita.com/KIYS/items/9805118aa86f35c7a852#%E5%AE%9F%E8%A3%85-6） -->
+          <v-card hover outlined>
+            <a :href="news.url" target="_blank" rel="noopener">
+              <v-hover v-slot:default="{ hover }">
+                <v-img :src="getImageUrl(news.urlToImage)" :class="{ 'on-hover': hover }" :aspect-ratio="16 / 9">
+                  <v-container fill-height fluid class="pa-0">
+                    <v-row class="mt-auto" no-gutters>
+                      <v-col cols="12" class="news-title-section pa-2">
+                        <h2 class="white--text" align="left">{{ news.title }}</h2>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                </v-img>
+              </v-hover>
+            </a>
+            <v-card-text class="caption text-right pt-1 pb-0">
+              <span class="mr-2">{{ news.author }}</span>
+              <time>{{ news.publishedAt }}</time>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -63,6 +66,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#news{
+}
 a {
   text-decoration: none;
   color: white;
