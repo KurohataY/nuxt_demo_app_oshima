@@ -99,8 +99,9 @@ export default {
   },
   // env設定
   env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     // OpenWeatherMap_API_key
-    WEATHER_API_KEY,
+    WEATHER_API_KEY: process.env.WEATHER_API_KEY || '',
     // News_API_key
     NEWS_API_KEY,
     // 楽天WebサービスAPI
