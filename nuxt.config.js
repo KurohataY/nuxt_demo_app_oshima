@@ -107,5 +107,8 @@ export default {
     NEWS_API_KEY: process.env.NEWS_API_KEY,
     // 楽天WebサービスAPI
     TRAVEL_API_KEY: process.env.TRAVEL_API_KEY,
-  }
+  },
+  axios: {
+    baseURL: process.env.BASE_URL	|| '/'	// 追記
+  },
 }
