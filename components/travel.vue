@@ -2,7 +2,7 @@
   <div class="">
     <v-container>
       <v-row no-gutter>
-        <v-col v-for="hotels of $store.state.hotels" cols="12" sm="6">
+        <v-col v-for="hotels of message" cols="12" sm="6">
           <!-- ニュースカード（参考：https://qiita.com/KIYS/items/9805118aa86f35c7a852#%E5%AE%9F%E8%A3%85-6） -->
           <v-card hover outlined>
             <a :href="hotels.hotelImageUrl" target="_blank" rel="noopener">
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  
+  props:['message'],
 }
 </script>
 

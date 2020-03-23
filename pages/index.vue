@@ -15,7 +15,7 @@
       <h3>観光マップ</h3>
       <Map />
       <h3>宿泊施設</h3>
-      <Travel />
+      <Travel :message="this.$store.state.hotels"/>
     </div>
     <!-- サイド -->
     <div id="side" class="web_style">

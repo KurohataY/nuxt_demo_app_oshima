@@ -9,7 +9,6 @@
   </div>
 
 </template>
-
 <script>
 import Vue from 'vue'
 // vue-youtube設定

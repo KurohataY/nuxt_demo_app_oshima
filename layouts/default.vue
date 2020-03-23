@@ -53,7 +53,6 @@ export default {
       try {
         const weather = await this.$axios.$get(url);
         this.$store.commit("getWeather", weather);
-        console.log(weather);
       } catch (e) {
         // エラー表示
         console.log(e)
