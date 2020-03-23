@@ -12,11 +12,7 @@ export default{
     return {
       title: "宮城県気仙沼市大島"
     }
-  },
-  created(){
-
   }
-
 }
 </script>
 

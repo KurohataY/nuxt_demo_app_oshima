@@ -35,34 +35,7 @@
 
 <script>
 export default {
-  data(){
-    return{
-      info:{
-        keyword: "%E6%B0%97%E4%BB%99%E6%B2%BC",
-        tel: "0226-28",
-      },
-      hotels: null,
-    }
-  },
-  async created(){
-    const url = "https://app.rakuten.co.jp/services/api/Travel/KeywordHotelSearch/20170426?format=json&keyword=" + this.info.keyword + "&applicationId=" + process.env.TRAVEL_API_KEY;
-    try {
-      const item = await this.$axios.$get(url);
-      // 都市名
-      var b = []
-      item.hotels.forEach(element =>{
-        const a = element.hotel[0].hotelBasicInfo.telephoneNo;
-        if (a.indexOf( this.info.tel ) !== -1){
-          (b).push(element.hotel[0].hotelBasicInfo);
-        }
-      });
-      this.$store.commit("getHotel", b);
-    } catch (e) {
-      // エラー表示
-      console.log(e);
-    }
-
-  }
+  
 }
 </script>
 

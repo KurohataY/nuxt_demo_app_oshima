@@ -31,30 +31,6 @@
 
 <script>
 export default {
-  data(){
-    return{
-      news: null,
-    }
-  },
-  created() {
-    // NewsAPI
-    const NewsAPI = require('newsapi');
-    const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
-
-    newsapi.v2.everything({
-      // キーワード「気仙沼」検索
-      q: '気仙沼',
-      // 新しい順（記事）
-      sortBy: 'publishedAt' ,
-      // 一定の検索結果を削除（ドメイン）
-      excludeDomains: 'shinobi.jp',
-    }).then(response => {
-      var news = response.articles;
-      this.news = news;
-      // ローカルストレージに保存
-      this.$store.commit("getNews", this.news);
-    });
-	},
   methods: {
     // 画像URL先の有無処理
     getImageUrl(imageUrl) {

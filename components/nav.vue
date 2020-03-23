@@ -65,18 +65,15 @@ h1 {
   background-color: white;
 }
 
-
 nav {
 	align-items: center;
 	vertical-align: center;
-
 	ul {
 		font-size: larger;
 		line-height: 2;
 		padding-left: 66.66%;
 		text-transform: uppercase;
     font-family: 'Pacifico', ;
-
 		li {
 			cursor: pointer;
       a{
@@ -97,5 +94,6 @@ nav {
 			translateX(-16.66%)
 			rotateY(25deg);
 	}
+  
 }
 </style>
