@@ -53,12 +53,14 @@ export default {
     '@nuxtjs/axios',
     // env管理
     '@nuxtjs/dotenv',
-
     // With options
     ['nuxt-leaflet', { /* module options */ }],
     // webfontloader
     ['nuxt-webfontloader'],
   ],
+  dotenv: {
+    path: process.cwd()
+  },
   webfontloader: {
     // Googleフォント「Kosugi Maru」
     google: {
