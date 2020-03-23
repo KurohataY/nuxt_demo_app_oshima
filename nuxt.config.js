@@ -3,7 +3,6 @@ import colors from 'vuetify/es5/util/colors'
 // dotenvの設定
 require("dotenv").config();
 // 有効化
-const { WEATHER_API_KEY ,NEWS_API_KEY ,TRAVEL_API_KEY} = process.env
 
 export default {
   mode: 'universal',
@@ -101,10 +100,10 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     // OpenWeatherMap_API_key
-    WEATHER_API_KEY: process.env.WEATHER_API_KEY || '',
+    WEATHER_API_KEY: process.env.WEATHER_API_KEY,
     // News_API_key
-    NEWS_API_KEY,
+    NEWS_API_KEY: process.env.NEWS_API_KEY,
     // 楽天WebサービスAPI
-    TRAVEL_API_KEY
+    TRAVEL_API_KEY: process.env.TRAVEL_API_KEY,
   }
 }
