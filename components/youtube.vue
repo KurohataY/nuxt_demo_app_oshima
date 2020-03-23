@@ -1,6 +1,5 @@
 <template >
-  <div>
-    <h3 class="">紹介動画</h3>
+  <div id="youtube_style">
     <youtube
       style="width: 50%;height: 300px;"
       v-for="id of youtube_id"
@@ -32,4 +31,7 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+#youtube_style{
+  padding: 0 12px;
+}
 </style>

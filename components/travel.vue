@@ -1,9 +1,8 @@
-<template>
-  <div id="tourism_style">
-    <h1>宿泊先一覧</h1>
+<template >
+  <div class="">
     <v-container>
       <v-row no-gutter>
-        <v-col v-for="hotels of $store.state.hotels_a" cols="12" sm="6">
+        <v-col v-for="hotels of $store.state.hotels" cols="12" sm="6">
           <!-- ニュースカード（参考：https://qiita.com/KIYS/items/9805118aa86f35c7a852#%E5%AE%9F%E8%A3%85-6） -->
           <v-card hover outlined>
             <a :href="hotels.hotelImageUrl" target="_blank" rel="noopener">
@@ -36,20 +35,38 @@
 
 <script>
 export default {
+  data(){
+    return{
+      info:{
+        keyword: "%E6%B0%97%E4%BB%99%E6%B2%BC",
+        tel: "0226-28",
+      },
+      hotels: null,
+    }
+  },
+  async created(){
+    const url = "https://app.rakuten.co.jp/services/api/Travel/KeywordHotelSearch/20170426?format=json&keyword=" + this.info.keyword + "&applicationId=" + process.env.TRAVEL_API_KEY;
+    try {
+      const item = await this.$axios.$get(url);
+      // 都市名
+      var b = []
+      item.hotels.forEach(element =>{
+        const a = element.hotel[0].hotelBasicInfo.telephoneNo;
+        if (a.indexOf( this.info.tel ) !== -1){
+          (b).push(element.hotel[0].hotelBasicInfo);
+        }
+      });
+      this.$store.commit("getHotel", b);
+    } catch (e) {
+      // エラー表示
+      console.log(e);
+    }
+
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-#tourism_style{
-  text-align: center;
-  h1{
-    font-size: 50px;
-    color: #ACB6E5;//非対応のブラウザでの文字色を設定
-    background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
-    -webkit-background-clip: text;//テキストでくり抜く
-    -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
-  }
-}
 a{
   text-decoration: none;
   color: white;

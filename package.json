@@ -12,16 +12,22 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "aos": "^3.0.0-beta.6",
     "dotenv": "^8.2.0",
+    "fibers": "^4.0.2",
     "newsapi": "^2.4.0",
     "nuxt": "^2.12.0",
-    "nuxt-leaflet": "0.0.21",
+    "nuxt-webfontloader": "^1.1.0",
     "vue-youtube": "^1.4.0",
     "vuex-persistedstate": "^2.7.1"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.0"
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/vuetify": "^1.11.0",
+    "@types/leaflet": "^1.5.12",
+    "node-sass": "^4.13.1",
+    "nuxt-leaflet": "0.0.21",
+    "sass-loader": "^8.0.2",
+    "vue2-leaflet": "^2.5.2",
+    "webpack": "^4.42.0"
   }
 }

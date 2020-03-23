@@ -7,6 +7,7 @@
     		<li><nuxt-link to="/">TOP</nuxt-link></li>
     		<li><nuxt-link to="/about">ABOUT</nuxt-link></li>
         <li><nuxt-link to="/tourism">Tourism</nuxt-link></li>
+        <li><nuxt-link to="/news-all">News</nuxt-link></li>
     	</ul>
     </nav>
     <!-- メニュータイトル -->
@@ -53,7 +54,7 @@ h1 {
 	top: 0;
 	left: 0;
 	right: 0;
-  height: 100px;
+  height: 150px;
 	transition: transform .4s;
 	transform:
 			perspective(800px)
@@ -61,7 +62,7 @@ h1 {
 			translateX(0)
 			rotateY(0);
 	transform-style: preserve-3d;
-
+  background-color: white;
 }
 
 

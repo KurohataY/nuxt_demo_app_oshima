@@ -1,6 +1,5 @@
 <template>
   <div id="top">
-    <h3>今日の天気</h3>
     <div class="weather_top">
       <!-- 天気画像 -->
       <img class="weather_img weather" :src="`http://openweathermap.org/img/wn/`+this.weather.icon+`.png`" alt="">

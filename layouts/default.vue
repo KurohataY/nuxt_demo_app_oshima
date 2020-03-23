@@ -5,7 +5,9 @@
       <!-- ナビバーの表示 -->
       <Nav />
     </header>
-    <nuxt />
+    <main>
+      <nuxt />
+    </main>
     <!-- フッター -->
     <footer>
       <Fot />
@@ -26,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 header{
-  height: 100px;
+  height: 150px;
   position: fixed;
   z-index: 1000;
 }
@@ -34,5 +36,8 @@ footer{
   margin:10px 0 0 0;
   height: 100px;
   background-color: #29A2E3;
+}
+main{
+  margin-top: 150px;
 }
 </style>

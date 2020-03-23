@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 // dotenvの設定
 require("dotenv").config();
 // 有効化
-const { WEATHER_API_KEY ,NEWS_API_KEY } = process.env
+const { WEATHER_API_KEY ,NEWS_API_KEY ,TRAVEL_API_KEY} = process.env
 
 export default {
   mode: 'universal',
@@ -57,7 +57,15 @@ export default {
 
     // With options
     ['nuxt-leaflet', { /* module options */ }],
+    // webfontloader
+    ['nuxt-webfontloader'],
   ],
+  webfontloader: {
+    // Googleフォント「Kosugi Maru」
+    google: {
+      families: ['Kosugi+Maru']
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -94,6 +102,8 @@ export default {
     // OpenWeatherMap_API_key
     WEATHER_API_KEY,
     // News_API_key
-    NEWS_API_KEY
+    NEWS_API_KEY,
+    // 楽天WebサービスAPI
+    TRAVEL_API_KEY
   }
 }

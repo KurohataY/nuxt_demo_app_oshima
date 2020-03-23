@@ -1,8 +1,9 @@
 <template>
   <div id="news">
+    <h1>気仙沼のニュース</h1>
     <v-container>
       <v-row no-gutter>
-        <v-col v-for="news of $store.state.news" cols="12" sm="6">
+        <v-col v-for="news of $store.state.news_a" cols="12" sm="6">
           <!-- ニュースカード（参考：https://qiita.com/KIYS/items/9805118aa86f35c7a852#%E5%AE%9F%E8%A3%85-6） -->
           <v-card hover outlined>
             <a :href="news.url" target="_blank" rel="noopener">
@@ -30,31 +31,7 @@
 </template>
 
 <script>
-export default {
-  data(){
-    return{
-      news: null,
-    }
-  },
-  created() {
-    // NewsAPI
-    const NewsAPI = require('newsapi');
-    const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
-
-    newsapi.v2.everything({
-      // キーワード「気仙沼」検索
-      q: '気仙沼',
-      // 新しい順（記事）
-      sortBy: 'publishedAt' ,
-      // 一定の検索結果を削除（ドメイン）
-      excludeDomains: 'shinobi.jp',
-    }).then(response => {
-      var news = response.articles;
-      this.news = news;
-      // ローカルストレージに保存
-      this.$store.commit("getNews", this.news);
-    });
-	},
+export default{
   methods: {
     // 画像URL先の有無処理
     getImageUrl(imageUrl) {
@@ -70,22 +47,30 @@ export default {
 
 <style lang="scss" scoped>
 #news{
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-.news-title-section {
-  background-color: rgba(20, 20, 20, 0.65);
-  h2 {
-    font-size: 18px;
+  text-align: center;
+  h1{
+    font-size: 50px;
+    color: #ACB6E5;//非対応のブラウザでの文字色を設定
+    background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
+    -webkit-background-clip: text;//テキストでくり抜く
+    -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
   }
-}
-.on-hover {
-  transition: 0.3s;
-  opacity: 0.7;
-}
-.v-responsive{
-  display: block;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .news-title-section {
+    background-color: rgba(20, 20, 20, 0.65);
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .on-hover {
+    transition: 0.3s;
+    opacity: 0.7;
+  }
+  .v-responsive{
+    display: block;
+  }
 }
 </style>
