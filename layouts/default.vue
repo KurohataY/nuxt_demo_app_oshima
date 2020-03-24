@@ -23,7 +23,7 @@ export default {
     Nav,
     Fot
   },
-  async fetch(){
+  created(){
     this.getNews();
     this.getWeather();
     this.getTravel();
@@ -48,10 +48,10 @@ export default {
       });
     },
     // 天気取得メソッド
-    getWeather(){
+    async getWeather(){
       const url = "https://api.openweathermap.org/data/2.5/weather?lat=38.8580205&lon=141.5845773&lang=ja&appid=" + process.env.WEATHER_API_KEY;
       try {
-        const weather = this.$axios.$get(url);
+        const weather = await this.$axios.$get(url);
         this.$store.commit("getWeather", weather);
       } catch (e) {
         // エラー表示
@@ -59,10 +59,10 @@ export default {
       }
     },
     // 宿泊施設取得メソッド
-   getTravel(){
+   async getTravel(){
       const url = "https://app.rakuten.co.jp/services/api/Travel/KeywordHotelSearch/20170426?format=json&keyword=%E6%B0%97%E4%BB%99%E6%B2%BC&applicationId=" + process.env.TRAVEL_API_KEY;
       try {
-        const item = this.$axios.$get(url);
+        const item = await this.$axios.$get(url);
         var b = []
         item.hotels.forEach(element =>{
           const a = element.hotel[0].hotelBasicInfo.telephoneNo;
