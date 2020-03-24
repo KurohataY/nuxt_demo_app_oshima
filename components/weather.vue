@@ -2,10 +2,10 @@
   <div id="top">
     <div class="weather_top">
       <!-- 天気画像 -->
-      <img class="weather_img weather" :src="this.getImage()" alt="">
+      <img class="weather_img weather" :src="getImage()" alt="">
       <!-- 温度 -->
       <div class="weather">
-        <div>{{$store.state.weather.temp}} 度</div>
+        <div>{{this.$store.state.weather.temp}} 度</div>
       </div>
     </div>
   </div>
