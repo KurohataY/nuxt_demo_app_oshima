@@ -22,6 +22,7 @@
       <!-- 天気取得（大船渡） -->
       <h3>今日の天気</h3>
       <Weather />
+      <Calendar />
       <!-- Twitter -->
       <h3>Twitter</h3>
       <div class="text-center">
@@ -40,6 +41,7 @@ import Weather from '~/components/weather.vue'
 import Youtubes from '~/components/youtube.vue'
 import News from '~/components/news.vue'
 import Travel from '~/components/travel.vue'
+import Calendar from '~/components/calendar.vue'
 
 export default {
   components: {
@@ -49,7 +51,8 @@ export default {
     Weather,
     Youtubes,
     News,
-    Travel
+    Travel,
+    Calendar
   }
 }
 </script>
