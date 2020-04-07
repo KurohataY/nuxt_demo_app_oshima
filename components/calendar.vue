@@ -1,9 +1,10 @@
+<!-- カレンダーコンポーネント -->
 <template>
   <v-row class="fill-height">
     <v-col>
       <v-sheet height="64">
         <v-toolbar flat color="white">
-          <v-btn outlined class="mr-4" color="grey darken-2" @click="setToday">
+          <v-btn outlined class="mr-4" color="grey darken-2" @click="setMonth">
             今月
           </v-btn>
           <v-btn fab text small color="grey darken-2" @click="prev">
@@ -22,7 +23,7 @@
           v-model="focus"
           :events="events"
           :event-color="getEventColor"
-          :now="today"
+          :now="month"
           :type="type"
           @change="updateRange"
         ></v-calendar>
@@ -76,8 +77,8 @@
       getEventColor (event) {
         return event.color
       },
-      setToday () {
-        this.focus = this.today
+      setMonth () {
+        this.focus = this.month
       },
       prev () {
         this.$refs.calendar.prev()
