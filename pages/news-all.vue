@@ -1,37 +1,16 @@
 <template>
   <div id="news">
     <h1>気仙沼のニュース</h1>
-    <v-container>
-      <v-row no-gutter>
-        <v-col v-for="news of $store.state.news_a" cols="12" sm="6">
-          <!-- ニュースカード（参考：https://qiita.com/KIYS/items/9805118aa86f35c7a852#%E5%AE%9F%E8%A3%85-6） -->
-          <v-card hover outlined>
-            <a :href="news.url" target="_blank" rel="noopener">
-              <v-hover v-slot:default="{ hover }">
-                <v-img :src="getImageUrl(news.urlToImage)" :class="{ 'on-hover': hover }" :aspect-ratio="16 / 9">
-                  <v-container fill-height fluid class="pa-0">
-                    <v-row class="mt-auto" no-gutters>
-                      <v-col cols="12" class="news-title-section pa-2">
-                        <h2 class="white--text" align="left">{{ news.title }}</h2>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                </v-img>
-              </v-hover>
-            </a>
-            <v-card-text class="caption text-right pt-1 pb-0">
-              <span class="mr-2">{{ news.author }}</span>
-              <time>{{ news.publishedAt }}</time>
-            </v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
+    <News :message="this.$store.state.news_a" />
   </div>
 </template>
 
 <script>
+import News from '~/components/news.vue'
 export default{
+  components: {
+    News
+  },
   methods: {
     // 画像URL先の有無処理
     getImageUrl(imageUrl) {

@@ -52,7 +52,7 @@ export default {
     Youtubes,
     News,
     Travel,
-    Calendar
+    Calendar,
   }
 }
 </script>
