@@ -7,3 +7,5 @@ NuxtでデモWebアプリケーションを作成中
 ・@nuxtjs/axios  
 ・@nuxtjs/dotenv  
 ・vuex-persistedstate  
+・楽天API（旅館検索）  
+・vuetifyによるv-card,v-calendar  
