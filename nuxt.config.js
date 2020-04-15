@@ -2,7 +2,6 @@ import colors from 'vuetify/es5/util/colors'
 
 // dotenvの設定
 require("dotenv").config();
-// 有効化
 
 export default {
   mode: 'universal',
@@ -19,6 +18,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' },
     ]
   },
   /*
@@ -28,8 +28,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
   /*
   ** Plugins to load before mounting the App
   */
