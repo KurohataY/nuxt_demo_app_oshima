@@ -10,7 +10,7 @@
       <Youtubes />
       <!-- ニュース表示 -->
       <h3>気仙沼のニュース</h3>
-      <News />
+      <News :message="this.$store.state.news"/>
       <!-- 地図の表示 -->
       <h3>観光マップ</h3>
       <Map />
