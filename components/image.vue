@@ -2,7 +2,16 @@
   <div class="title_img">
     <img src="../static/oosima.webp" alt="">
     <div class="title_char">
-      <p>{{this.title}}</p>
+      <!-- <transition name="fade">
+        <p v-if="show">{{this.title}}</p>
+      </transition> -->
+      <transition
+        name="custom-classes-transition"
+        enter-active-class="animated zoomInUp"
+        leave-active-class="animated zoomOut"
+      >
+        <p v-if="show">{{this.title}}</p>
+      </transition>
     </div>
   </div>
 </template>
@@ -10,8 +19,12 @@
 export default{
   data() {
     return {
-      title: "宮城県気仙沼市大島"
+      title: "宮城県気仙沼市大島",
+      show: false
     }
+  },
+  mounted(){
+    this.show = !this.show
   }
 }
 </script>
