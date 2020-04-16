@@ -2,16 +2,20 @@
   <div class="title_img">
     <img src="../static/oosima.webp" alt="">
     <div class="title_char">
-      <!-- <transition name="fade">
-        <p v-if="show">{{this.title}}</p>
-      </transition> -->
-      <transition
-        name="custom-classes-transition"
+      <!-- <transition
+        name="custom"
         enter-active-class="animated zoomInUp"
         leave-active-class="animated zoomOut"
       >
         <p v-if="show">{{this.title}}</p>
-      </transition>
+      </transition> -->
+      <span
+      v-for="(t, index) in title"
+      :key="index"
+      class="item"
+      :style="{animationDelay: index*100+'ms'}"
+      v-text="t"
+      />
     </div>
   </div>
 </template>
@@ -23,9 +27,9 @@ export default{
       show: false
     }
   },
-  mounted(){
-    this.show = !this.show
-  }
+  mounted() {
+    this.show = !this.show;
+  },
 }
 </script>
 
@@ -49,10 +53,22 @@ export default{
   max-height: 100%;
   text-align: center;
   // 文字の色・サイズ
-  p{
+  span{
     color: white;
     font-size: 66px;
   }
+}
+@keyframes text-in {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+}
+.item {
+  display: inline-block;
+  min-width: 0.3em;
+  font-size: 2rem;
+  animation: text-in .8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
 }
 
 </style>

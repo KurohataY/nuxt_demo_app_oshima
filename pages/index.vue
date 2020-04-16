@@ -1,7 +1,7 @@
 <template>
   <div id="web" class="clearfix">
     <!-- タイトル画像 -->
-    <Img />
+    <Title />
     <!-- 説明文 -->
     <Des />
     <!-- メイン -->
@@ -35,7 +35,7 @@
 
 <script>
 import Map from '~/components/map.vue'
-import Img from '~/components/image.vue'
+import Title from '~/components/title.vue'
 import Des from '~/components/description.vue'
 import Weather from '~/components/weather.vue'
 import Youtubes from '~/components/youtube.vue'
@@ -46,7 +46,7 @@ import Calendar from '~/components/calendar.vue'
 export default {
   components: {
     Map,
-    Img,
+    Title,
     Des,
     Weather,
     Youtubes,
