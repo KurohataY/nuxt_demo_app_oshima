@@ -1,11 +1,16 @@
 <template >
-  <div id="youtube_style">
-    <youtube
-      style="width: 50%;height: 300px;"
-      v-for="id of youtube_id"
-      ref="youtube"
-      :video-id="id"
-      />
+  <v-container>
+    <v-row no-gutter>
+      <v-col v-for="id of youtube_id" cols="12" sm="6">
+        <youtube
+          style="width: 100%;height: 300px;"
+          ref="youtube"
+          :video-id="id"
+          />
+      </v-col>
+    </v-row>
+  </v-container>
+
   </div>
 
 </template>

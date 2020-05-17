@@ -3,7 +3,7 @@
   <div id="map">
    <no-ssr>
      <!-- 気仙沼大島の緯度・経度 -->
-     <l-map :zoom="zoom" :center="center">
+     <l-map :zoom="zoom" :center="center" :red="map">
        <l-tile-layer :url="url"></l-tile-layer>
        <l-marker v-for="marker of marker" :lat-lng="marker.lat" class="dev">
          <l-popup :content="marker.contents"></l-popup>
@@ -14,10 +14,12 @@
 </template>
 
 <script>
+
 export default{
   data() {
     return{
       // leafletの設定
+      map: null,
       center: [38.856355,141.615593],
       zoom: 13,
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
@@ -49,7 +51,13 @@ export default{
         },
       }
     }
-  }
+  },
+  // mounted() {
+  //   L.map( 'map', { center: L.latLng( this.center[0],this.center[1] ), zoom: 13 } ).addLayer(
+  //     L.tileLayer( 'http://{s}.tile.osm.org/{z}/{x}/{y}.png' )
+  //   );
+  //   L.marker();
+  // }
 }
 
 </script>

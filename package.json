@@ -8,12 +8,15 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "generate": "nuxt generate",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
     "dotenv": "^8.2.0",
     "fibers": "^4.0.2",
+    "leaflet": "^1.6.0",
+    "leaflet.zoomhome": "^0.3.0",
     "newsapi": "^2.4.0",
     "nuxt": "^2.12.0",
     "nuxt-webfontloader": "^1.1.0",
@@ -21,6 +24,7 @@
     "vuex-persistedstate": "^2.7.1"
   },
   "devDependencies": {
+    "@mdi/font": "^5.1.45",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/vuetify": "^1.11.0",
     "@types/leaflet": "^1.5.12",

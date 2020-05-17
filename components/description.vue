@@ -26,8 +26,5 @@ export default{
   #description{
     text-align: center;
     font-size: 25px;
-    p{
-
-    }
   }
 </style>

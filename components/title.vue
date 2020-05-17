@@ -2,20 +2,13 @@
   <div class="title_img">
     <img src="../static/oosima.webp" alt="">
     <div class="title_char">
-      <!-- <transition
-        name="custom"
-        enter-active-class="animated zoomInUp"
-        leave-active-class="animated zoomOut"
-      >
-        <p v-if="show">{{this.title}}</p>
-      </transition> -->
-      <span
-      v-for="(t, index) in title"
-      :key="index"
-      class="item"
-      :style="{animationDelay: index*100+'ms'}"
-      v-text="t"
-      />
+        <span
+        v-for="(t, index) in title"
+        :key="index"
+        class="item"
+        :style="{animationDelay: index*100+'ms'}"
+        v-text="t"
+        />
     </div>
   </div>
 </template>
@@ -24,12 +17,9 @@ export default{
   data() {
     return {
       title: "宮城県気仙沼市大島",
-      show: false
+      show: true
     }
-  },
-  mounted() {
-    this.show = !this.show;
-  },
+  }
 }
 </script>
 
@@ -58,6 +48,7 @@ export default{
     font-size: 66px;
   }
 }
+// 以下文字が浮かび上がるスタイル
 @keyframes text-in {
   0% {
     transform: translate(0, -20px);

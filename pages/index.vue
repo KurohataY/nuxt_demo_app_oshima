@@ -16,18 +16,9 @@
       <Map />
       <h3>宿泊施設</h3>
       <Travel :message="this.$store.state.hotels"/>
-    </div>
-    <!-- サイド -->
-    <div id="side" class="web_style">
-      <!-- 天気取得（大船渡） -->
       <h3>今日の天気</h3>
       <Weather />
       <Calendar />
-      <!-- Twitter -->
-      <h3>Twitter</h3>
-      <div class="text-center">
-        <a class="twitter-timeline" data-lang="ja" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/COiod3nId8QqtKv?ref_src=twsrc%5Etfw">Tweets by COiod3nId8QqtKv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
     </div>
   </div>
 
@@ -66,7 +57,6 @@ export default {
 }
 #web{
   margin-top: 150px;
-  font-family: 'Kosugi Maru', sans-serif;
   h3{
     font-size:25px;
     margin-top: 20px;
@@ -77,13 +67,11 @@ export default {
 }
 #main{
   background: #ffffff;
-  width: 70%;
   display: inline;
   float: left;
   text-align: center;
 }
 #side{
-  width: 25%;
   display:inline;
   float: right;
 }

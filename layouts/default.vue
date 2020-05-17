@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="nuxtbody">
     <!-- ヘッダー -->
     <header>
       <!-- ナビバーの表示 -->
@@ -82,6 +82,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#nuxtbody{
+  font-family: 'Kosugi Maru', sans-serif;
+}
 header{
   height: 150px;
   position: fixed;
