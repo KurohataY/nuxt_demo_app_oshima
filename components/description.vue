@@ -1,7 +1,15 @@
 <template>
-  <div id="description">
-    <p class="des_p" style="margin: 100px 0;" v-for="description of descriptions">{{description}}</p>
-  </div>
+  <v-app>
+    <v-row no-gutter>
+      <v-col cols="12" sm="12">
+        <div id="description">
+          <p class="des_p" style="margin: 100px 0;" v-for="description of descriptions">{{description}}</p>
+        </div>
+      </v-col>
+
+    </v-row>
+
+  </v-app>
 </template>
 
 

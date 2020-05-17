@@ -86,7 +86,7 @@ nav {
 
 .home {
 	background: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
-
+  max-width: 100vw;
 	#nav:hover & {
 		transform:
 			perspective(800px)
@@ -94,6 +94,6 @@ nav {
 			translateX(-16.66%)
 			rotateY(25deg);
 	}
-  
+
 }
 </style>

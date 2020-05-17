@@ -1,6 +1,6 @@
 <template>
-  <div class="title_img">
-    <img src="../static/oosima.webp" alt="">
+  <div class="title">
+    <img src="../static/oosima.webp" alt="" id="title_img">
     <div class="title_char">
         <span
         v-for="(t, index) in title"
@@ -24,7 +24,7 @@ export default{
 </script>
 
 <style lang="scss">
-.title_img{
+.title{
   position: relative;
   img{
     width: 100%;

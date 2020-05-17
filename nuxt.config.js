@@ -29,7 +29,9 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    '@/assets/reset.css'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -74,7 +76,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
