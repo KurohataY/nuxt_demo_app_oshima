@@ -45,7 +45,7 @@ export default{
   // 文字の色・サイズ
   span{
     color: white;
-    font-size: 66px;
+    font-size: 5vw;
   }
 }
 // 以下文字が浮かび上がるスタイル

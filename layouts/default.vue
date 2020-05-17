@@ -91,7 +91,6 @@ header{
   z-index: 1000;
 }
 footer{
-  margin:10px 0 0 0;
   height: 100px;
   background-color: #29A2E3;
 }

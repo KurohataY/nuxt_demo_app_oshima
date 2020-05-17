@@ -11,13 +11,14 @@
       <!-- ニュース表示 -->
       <h3>気仙沼のニュース</h3>
       <News :message="this.$store.state.news"/>
+      <h3>宿泊施設</h3>
+      <Travel :message="this.$store.state.hotels"/>
       <!-- 地図の表示 -->
       <h3>観光マップ</h3>
       <Map />
-      <h3>宿泊施設</h3>
-      <Travel :message="this.$store.state.hotels"/>
       <h3>今日の天気</h3>
       <Weather />
+      <h3>イベントカレンダー</h3>
       <Calendar />
     </div>
   </div>
@@ -59,7 +60,8 @@ export default {
   margin-top: 150px;
   h3{
     font-size:25px;
-    margin-top: 20px;
+    text-align: center;
+    margin:50px 0;
   }
 }
 .web_style{
@@ -68,20 +70,12 @@ export default {
 #main{
   background: #ffffff;
   display: inline;
-  float: left;
   text-align: center;
 }
-#side{
-  display:inline;
-  float: right;
-}
+
 .twitter-timeline{
   width: 300px;
   height: 300px;
-}
-h3{
-  text-align: center;
-  margin:10px 0;
 }
 .text-center{
   text-align: center;
