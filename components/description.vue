@@ -32,6 +32,7 @@ export default{
 
 <style land="scss" scoped>
   #description{
+    padding: 0 10px;
     text-align: center;
     font-size: 25px;
   }

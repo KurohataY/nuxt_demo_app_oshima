@@ -1,6 +1,6 @@
 <!-- カレンダーコンポーネント -->
 <template>
-  <v-app>
+  <v-app id="calendar_css">
     <v-row class="fill-height">
       <v-col>
         <v-sheet height="64">
@@ -238,7 +238,7 @@
   }
 </script>
 <style lang="scss" scoped>
-// .controls {
-//   position: relative;
-// }
+#calendar_css{
+  padding: 0 10px;
+}
 </style>

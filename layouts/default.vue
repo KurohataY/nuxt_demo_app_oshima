@@ -84,7 +84,6 @@ export default {
 <style lang="scss" scoped>
 #nuxtbody{
   font-family: 'Kosugi Maru', sans-serif;
-  padding: 0 10px;
 }
 header{
   height: 150px;

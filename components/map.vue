@@ -66,6 +66,6 @@ export default{
 #map {
     margin:0 auto;
     height: 400px;
-    padding: 0 12px;
+    padding: 0 10px;
 }
 </style>

@@ -31,6 +31,7 @@ export default {
 
 // （ナビバー参考）https://codepen.io/bennettfeely/pen/xwrMMX
 body {
+  padding: 0 10px;
 	font: 100%/1.4 Unica One;
 	text-transform: uppercase;
 	background: #222;
